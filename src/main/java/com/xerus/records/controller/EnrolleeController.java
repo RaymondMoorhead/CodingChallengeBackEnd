@@ -30,6 +30,12 @@ public class EnrolleeController {
 	}
 
 	@PutMapping(value = "/enrollee/add")
+	/*!
+		\brief Adds an Enrollee with the given values to the database via EnrolleeService
+		\param enrollee The Enrollee information to add, must have no id
+		\return The Enrollee object added
+		\sa Enrollee, EnrolleeService
+	 */
 	public Enrollee addEnrollee(@RequestBody Enrollee enrollee) {
 		return enService.AddEnrollee(enrollee);
 	}

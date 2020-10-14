@@ -13,6 +13,8 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Component
 public class Enrollee {
 
@@ -20,7 +22,10 @@ public class Enrollee {
 	private String id;
 	private String name;
 	private boolean activationStatus;
+	
+	@JsonFormat(pattern="MM-dd-yyyy")
 	private Date birthDate;
+	
 	private String phoneNumber;
 	private List<Dependent> dependents;
 	

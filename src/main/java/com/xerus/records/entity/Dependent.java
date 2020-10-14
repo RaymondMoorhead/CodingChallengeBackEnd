@@ -11,11 +11,15 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Component
 public class Dependent {
 	@Id
 	private String id;
 	private String name;
+	
+	@JsonFormat(pattern="MM-dd-yyyy")
 	private Date birthDate;
 	
 	// GETTERS AND SETTERS
