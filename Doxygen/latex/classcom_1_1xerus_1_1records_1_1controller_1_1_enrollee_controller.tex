@@ -1,0 +1,161 @@
+\hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller}{}\doxysection{com.\+xerus.\+records.\+controller.\+Enrollee\+Controller Class Reference}
+\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller}\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a84b0f604b2ee1f36807539f59c5b0632}{get\+Enrollee}} (@Path\+Variable(value=\char`\"{}id\char`\"{}) String id)
+\begin{DoxyCompactList}\small\item\em Acquires an Enrollee with the given id from the database via Enrollee\+Service. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_ae9a6d2a4093d4f35b58ca138673fa670}{add\+Enrollee}} (@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} enrollee)
+\begin{DoxyCompactList}\small\item\em Adds an Enrollee with the given values to the database via Enrollee\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a54122a7a839554a450eb8333f0e2e831}{update\+Enrollee}} (@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} enrollee)
+\begin{DoxyCompactList}\small\item\em Updates an existing Enrollee with the given values in the database via Enrollee\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a82ddc5d0fef3b4cf0c33a448a8ed0c8b}{delete\+Enrollee}} (@Path\+Variable(value=\char`\"{}id\char`\"{}) String id)
+\begin{DoxyCompactList}\small\item\em Deletes the Enrollee with the given id via Enrollee\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a55309e44d1fb82ab5d7b6c4b6d349639}{add\+Enrollee\+Dependent}} (@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String en\+Id, @Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String dep\+Id)
+\begin{DoxyCompactList}\small\item\em Adds a Dependent to an Enrollee in the database via Enrollee\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a2b9cf59817be2f8ae4e0edd71d4b591e}{delete\+Enrollee\+Dependent}} (@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String en\+Id, @Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String dep\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a Dependent from an Enrollee in the database via Enrollee\+Service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_ac782cfed7da37490840d0eb0a5a4e683}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_ac782cfed7da37490840d0eb0a5a4e683}} 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service}{Enrollee\+Service}} {\bfseries en\+Service}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_ae9a6d2a4093d4f35b58ca138673fa670}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_ae9a6d2a4093d4f35b58ca138673fa670}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!addEnrollee@{addEnrollee}}
+\index{addEnrollee@{addEnrollee}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{addEnrollee()}{addEnrollee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+add\+Enrollee (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}}}]{enrollee }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an Enrollee with the given values to the database via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enrollee} & The Enrollee information to add, must have a name and birth date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Enrollee object added, or null if there was missing information 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a55309e44d1fb82ab5d7b6c4b6d349639}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a55309e44d1fb82ab5d7b6c4b6d349639}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!addEnrolleeDependent@{addEnrolleeDependent}}
+\index{addEnrolleeDependent@{addEnrolleeDependent}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{addEnrolleeDependent()}{addEnrolleeDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+add\+Enrollee\+Dependent (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String}]{en\+Id,  }\item[{@Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String}]{dep\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a Dependent to an Enrollee in the database via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em en\+Id} & The id of the Enrollee to add the Dependent to \\
+\hline
+{\em dep\+Id} & The id of the Dependent to add to the Enrollee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the addition was successful, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a82ddc5d0fef3b4cf0c33a448a8ed0c8b}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a82ddc5d0fef3b4cf0c33a448a8ed0c8b}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!deleteEnrollee@{deleteEnrollee}}
+\index{deleteEnrollee@{deleteEnrollee}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{deleteEnrollee()}{deleteEnrollee()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+delete\+Enrollee (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}id\char`\"{}) String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the Enrollee with the given id via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the Enrollee to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an Enrollee of the given id existed, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a2b9cf59817be2f8ae4e0edd71d4b591e}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a2b9cf59817be2f8ae4e0edd71d4b591e}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!deleteEnrolleeDependent@{deleteEnrolleeDependent}}
+\index{deleteEnrolleeDependent@{deleteEnrolleeDependent}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{deleteEnrolleeDependent()}{deleteEnrolleeDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+delete\+Enrollee\+Dependent (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String}]{en\+Id,  }\item[{@Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String}]{dep\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a Dependent from an Enrollee in the database via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em en\+Id} & The id of the Enrollee to remove the Dependent from \\
+\hline
+{\em dep\+Id} & The id of the Dependent to remove from the Enrollee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the rmoval was successful, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a84b0f604b2ee1f36807539f59c5b0632}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a84b0f604b2ee1f36807539f59c5b0632}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!getEnrollee@{getEnrollee}}
+\index{getEnrollee@{getEnrollee}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{getEnrollee()}{getEnrollee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+get\+Enrollee (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}id\char`\"{}) String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acquires an Enrollee with the given id from the database via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the Enrollee to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Enrollee with the supplied id, or null if none exists 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a54122a7a839554a450eb8333f0e2e831}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a54122a7a839554a450eb8333f0e2e831}} 
+\index{com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}!updateEnrollee@{updateEnrollee}}
+\index{updateEnrollee@{updateEnrollee}!com.xerus.records.controller.EnrolleeController@{com.xerus.records.controller.EnrolleeController}}
+\doxysubsubsection{\texorpdfstring{updateEnrollee()}{updateEnrollee()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Enrollee\+Controller.\+update\+Enrollee (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}}}]{enrollee }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing Enrollee with the given values in the database via Enrollee\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enrollee} & The Enrollee information to update with, including the id used to find the original \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the update was successful, false otherwise (such as no id, or non-\/existent id) 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Enrollee, Enrollee\+Service 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/\+Downloads/\+Job/\+Cognixia/\+Jump\+Plus/\+Week14/\+Xerus\+Records/src/main/java/com/xerus/records/controller/\mbox{\hyperlink{_enrollee_controller_8java}{Enrollee\+Controller.\+java}}\end{DoxyCompactItemize}

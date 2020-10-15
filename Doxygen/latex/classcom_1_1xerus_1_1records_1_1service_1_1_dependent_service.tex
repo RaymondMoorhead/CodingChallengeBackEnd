@@ -1,0 +1,111 @@
+\hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service}{}\doxysection{com.\+xerus.\+records.\+service.\+Dependent\+Service Class Reference}
+\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service}\index{com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a398cea62cb2d4834c3d645e1a9c13d0d}{add\+Dependent}} (\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} dependent)
+\begin{DoxyCompactList}\small\item\em Adds a Dependent to the Dependent\+Dao if they aren\textquotesingle{}t present in it. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a4ac725c05e41e8034a68800951f45984}{update\+Dependent}} (\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} dependent)
+\begin{DoxyCompactList}\small\item\em Updates an Dependent in the Dependent\+Dao given an Dependent object with a valid id. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a84491e5b31daa082d8784b78932e79f9}{delete\+Dependent}} (String id)
+\begin{DoxyCompactList}\small\item\em Deletes the Dependent with the given id from Dependent\+Dao. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a783b6f9bc87f8940e660733f44fae9c9}{get\+Dependent}} (String id)
+\begin{DoxyCompactList}\small\item\em Gets a Dependent from the Dependent\+Dao, or null if none exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a915e47f34fe894b02d3f2574d777e809}\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a915e47f34fe894b02d3f2574d777e809}} 
+\mbox{\hyperlink{interfacecom_1_1xerus_1_1records_1_1dao_1_1_dependent_dao}{Dependent\+Dao}} {\bfseries dep\+Dao}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a398cea62cb2d4834c3d645e1a9c13d0d}\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a398cea62cb2d4834c3d645e1a9c13d0d}} 
+\index{com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}!addDependent@{addDependent}}
+\index{addDependent@{addDependent}!com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}}
+\doxysubsubsection{\texorpdfstring{addDependent()}{addDependent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} com.\+xerus.\+records.\+service.\+Dependent\+Service.\+add\+Dependent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}}}]{dependent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a Dependent to the Dependent\+Dao if they aren\textquotesingle{}t present in it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependent} & The dependent we will add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Dependent generated in Dependent\+Dao 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Dao 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a84491e5b31daa082d8784b78932e79f9}\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a84491e5b31daa082d8784b78932e79f9}} 
+\index{com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}!deleteDependent@{deleteDependent}}
+\index{deleteDependent@{deleteDependent}!com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}}
+\doxysubsubsection{\texorpdfstring{deleteDependent()}{deleteDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+service.\+Dependent\+Service.\+delete\+Dependent (\begin{DoxyParamCaption}\item[{String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the Dependent with the given id from Dependent\+Dao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the Dependent to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an Dependent of the given id existed, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Dao 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a783b6f9bc87f8940e660733f44fae9c9}\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a783b6f9bc87f8940e660733f44fae9c9}} 
+\index{com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}!getDependent@{getDependent}}
+\index{getDependent@{getDependent}!com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}}
+\doxysubsubsection{\texorpdfstring{getDependent()}{getDependent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} com.\+xerus.\+records.\+service.\+Dependent\+Service.\+get\+Dependent (\begin{DoxyParamCaption}\item[{String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a Dependent from the Dependent\+Dao, or null if none exist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the desired Dependent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Dependent Dependent\+Dao, or null if none is present 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Dao 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a4ac725c05e41e8034a68800951f45984}\label{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service_a4ac725c05e41e8034a68800951f45984}} 
+\index{com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}!updateDependent@{updateDependent}}
+\index{updateDependent@{updateDependent}!com.xerus.records.service.DependentService@{com.xerus.records.service.DependentService}}
+\doxysubsubsection{\texorpdfstring{updateDependent()}{updateDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+service.\+Dependent\+Service.\+update\+Dependent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}}}]{dependent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an Dependent in the Dependent\+Dao given an Dependent object with a valid id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependent} & The Dependent to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the update was successful, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Dao 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/\+Downloads/\+Job/\+Cognixia/\+Jump\+Plus/\+Week14/\+Xerus\+Records/src/main/java/com/xerus/records/service/\mbox{\hyperlink{_dependent_service_8java}{Dependent\+Service.\+java}}\end{DoxyCompactItemize}
