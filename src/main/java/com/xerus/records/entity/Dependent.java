@@ -24,15 +24,21 @@ public class Dependent {
 	private String name;
 	
 	@JsonFormat(pattern="MM-dd-yyyy")
-	//! The birth date of the Dependent, in 'MM-dd-yyyy' format
+	//! The birth date of the Dependent, saved in 'MM-dd-yyyy' format
 	private Date birthDate;
 	
 	// CONSTRUCTORS
 	
+	//! Default Dependent constructor, performs no significant operations
 	public Dependent() {
 		super();
 	}
 	
+	/*!
+		\brief Constructor which enables initialization of name and birthDate
+		\param name The value to assign to Dependent.name
+		\param birthDate The value to assign to Dependent.birthDate
+	 */
 	public Dependent(String name, Date birthDate) {
 		super();
 		this.name = name;
@@ -41,21 +47,50 @@ public class Dependent {
 	
 	// GETTERS AND SETTERS
 
+	/*!
+		\brief Getter for Dependent.id, performs no unexpected operations
+		\return Dependent.id
+	 */
 	public String getId() {
 		return id;
 	}
+	
+	/*!
+		\brief Setter for Dependent.id, performs no unexpected operations
+		\param id The id to set Dependent.id with
+	 */
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	/*!
+		\brief Getter for Dependent.name, performs no unexpected operations
+		\return Dependent.name
+	 */
 	public String getName() {
 		return name;
 	}
+	
+	/*!
+		\brief Setter for Dependent.name, performs no unexpected operations
+		\param name The name to set Dependent.name with
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	/*!
+		\brief Getter for Dependent.birthDate, performs no unexpected operations
+		\return Dependent.birthDate
+	 */
 	public Date getBirthDate() {
 		return birthDate;
 	}
+	
+	/*!
+		\brief Setter for Dependent.birthDate, performs no unexpected operations
+		\param birthDate The birth date to set Dependent.birthDate with
+	 */
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}

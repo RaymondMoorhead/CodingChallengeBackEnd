@@ -1,0 +1,119 @@
+\hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller}{}\doxysection{com.\+xerus.\+records.\+controller.\+Dependent\+Controller Class Reference}
+\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller}\index{com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}}
+
+
+A\+Pi which enables external use of C\+R\+UD operations on Dependent objects in the database.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_aadb938c4bd2e5350665fee5471f54485}{get\+Dependent}} (@Path\+Variable(value=\char`\"{}id\char`\"{}) String id)
+\begin{DoxyCompactList}\small\item\em Acquires a Dependent with the given id from the database via Dependent\+Service. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ac0fada57b3e24b014e62ac7f95d43f90}{add\+Dependent}} (@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} dependent)
+\begin{DoxyCompactList}\small\item\em Adds an Enrollee with the given values to the database via Dependent\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ae826fa8a8936f4a0bfe0384b07e4c884}{update\+Dependent}} (@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} dependent)
+\begin{DoxyCompactList}\small\item\em Updates an existing Dependent with the given values in the database via Dependent\+Service. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab95ec92f16101dc6258a3bbe10aa178e}{delete\+Dependent}} (@Path\+Variable(value=\char`\"{}id\char`\"{}) String id)
+\begin{DoxyCompactList}\small\item\em Deletes the Dependent with the given id via Dependent\+Service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab0264f8eeaed8b7f8f79dc68665e7cea}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab0264f8eeaed8b7f8f79dc68665e7cea}} 
+\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_dependent_service}{Dependent\+Service}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab0264f8eeaed8b7f8f79dc68665e7cea}{dep\+Service}}
+\begin{DoxyCompactList}\small\item\em The Service which all operations are funneled through. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+Pi which enables external use of C\+R\+UD operations on Dependent objects in the database. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ac0fada57b3e24b014e62ac7f95d43f90}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ac0fada57b3e24b014e62ac7f95d43f90}} 
+\index{com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}!addDependent@{addDependent}}
+\index{addDependent@{addDependent}!com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}}
+\doxysubsubsection{\texorpdfstring{addDependent()}{addDependent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} com.\+xerus.\+records.\+controller.\+Dependent\+Controller.\+add\+Dependent (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}}}]{dependent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an Enrollee with the given values to the database via Dependent\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependent} & The Dependent information to add, must have a name and birth date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Dependent object added, or null if there was missing information 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab95ec92f16101dc6258a3bbe10aa178e}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ab95ec92f16101dc6258a3bbe10aa178e}} 
+\index{com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}!deleteDependent@{deleteDependent}}
+\index{deleteDependent@{deleteDependent}!com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}}
+\doxysubsubsection{\texorpdfstring{deleteDependent()}{deleteDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Dependent\+Controller.\+delete\+Dependent (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}id\char`\"{}) String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes the Dependent with the given id via Dependent\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the Dependent to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an Dependent of the given id existed, false otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_aadb938c4bd2e5350665fee5471f54485}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_aadb938c4bd2e5350665fee5471f54485}} 
+\index{com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}!getDependent@{getDependent}}
+\index{getDependent@{getDependent}!com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}}
+\doxysubsubsection{\texorpdfstring{getDependent()}{getDependent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}} com.\+xerus.\+records.\+controller.\+Dependent\+Controller.\+get\+Dependent (\begin{DoxyParamCaption}\item[{@Path\+Variable(value=\char`\"{}id\char`\"{}) String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acquires a Dependent with the given id from the database via Dependent\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the Dependent to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Dependent with the supplied id, or null if none exists 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Service 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ae826fa8a8936f4a0bfe0384b07e4c884}\label{classcom_1_1xerus_1_1records_1_1controller_1_1_dependent_controller_ae826fa8a8936f4a0bfe0384b07e4c884}} 
+\index{com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}!updateDependent@{updateDependent}}
+\index{updateDependent@{updateDependent}!com.xerus.records.controller.DependentController@{com.xerus.records.controller.DependentController}}
+\doxysubsubsection{\texorpdfstring{updateDependent()}{updateDependent()}}
+{\footnotesize\ttfamily boolean com.\+xerus.\+records.\+controller.\+Dependent\+Controller.\+update\+Dependent (\begin{DoxyParamCaption}\item[{@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_dependent}{Dependent}}}]{dependent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing Dependent with the given values in the database via Dependent\+Service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependent} & The Dependent information to update with, including the id used to find the original \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the update was successful, false otherwise (such as no id, or non-\/existent id) 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Dependent, Dependent\+Service 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/\+Downloads/\+Job/\+Cognixia/\+Jump\+Plus/\+Week14/\+Xerus\+Records/src/main/java/com/xerus/records/controller/\mbox{\hyperlink{_dependent_controller_8java}{Dependent\+Controller.\+java}}\end{DoxyCompactItemize}

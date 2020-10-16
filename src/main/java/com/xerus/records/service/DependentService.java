@@ -1,7 +1,7 @@
 /*! \file DependentService.java
     \date 10/14/2020
     \author Raymond Moorhead
-    \brief Service which acts as a middleman between controllers and DependentDao
+    \brief Contains the DependentService class
 */
 
 package com.xerus.records.service;
@@ -15,9 +15,11 @@ import com.xerus.records.dao.DependentDao;
 import com.xerus.records.entity.Dependent;
 
 @Service
+//! Service which acts as a middleman between controllers and DependentDao
 public class DependentService {
 
 	@Autowired
+	//! The Data Access Object for Dependents
 	private DependentDao depDao;
 	
 	/*!
@@ -41,6 +43,8 @@ public class DependentService {
  */
 	public boolean updateDependent(Dependent dependent) {
 		if((dependent.getId() != null) &&
+			(dependent.getName() != null) &&
+			(dependent.getBirthDate() != null) &&
 			(depDao.existsById(dependent.getId())))
 			return depDao.save(dependent) != null;
 		return false;

@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //!  The entry point class for the application
 public class XerusRecordKeeperApplication {
 
+	//!  The entry point method for the application
 	public static void main(String[] args) {
 		SpringApplication.run(XerusRecordKeeperApplication.class, args);
 	}

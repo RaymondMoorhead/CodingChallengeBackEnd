@@ -1,6 +1,10 @@
-package com.xerus.records.controller;
+/*! \file DependentController.java
+    \date 10/14/2020
+    \author Raymond Moorhead
+    \brief Contains DependentController class
+*/
 
-import java.util.List;
+package com.xerus.records.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,9 +18,11 @@ import com.xerus.records.entity.Dependent;
 import com.xerus.records.service.DependentService;
 
 @RestController
+//! APi which enables external use of CRUD operations on Dependent objects in the database
 public class DependentController {
 
 	@Autowired
+	//! The Service which all operations are funneled through
 	private DependentService depService;
 	
 	@GetMapping(value = "/dependent/get/{id}")

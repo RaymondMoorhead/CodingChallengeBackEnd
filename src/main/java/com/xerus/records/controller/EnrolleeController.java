@@ -1,7 +1,7 @@
 /*! \file EnrolleeController.java
     \date 10/14/2020
     \author Raymond Moorhead
-    \brief Controller which allows access to Enrollees
+    \brief Contains EnrolleeController class
 */
 
 package com.xerus.records.controller;
@@ -19,9 +19,11 @@ import com.xerus.records.entity.Enrollee;
 import com.xerus.records.service.EnrolleeService;
 
 @RestController
+//! APi which enables external use of CRUD operations on Enrollee objects in the database
 public class EnrolleeController {
 	
 	@Autowired
+	//! The Service which all operations are funneled through
 	private EnrolleeService enService;
 	
 	@GetMapping(value = "/enrollee/get/{id}")
@@ -81,7 +83,7 @@ public class EnrolleeController {
 		return enService.addEnrolleeDependent(enId, depId);
 	}
 	
-	@DeleteMapping(value = "/enrollee/delete/{enId}/dependent/{depId}\"")
+	@DeleteMapping(value = "/enrollee/delete/{enId}/dependent/{depId}")
 	/*!
 		\brief Removes a Dependent from an Enrollee in the database via EnrolleeService
 		\param enId The id of the Enrollee to remove the Dependent from

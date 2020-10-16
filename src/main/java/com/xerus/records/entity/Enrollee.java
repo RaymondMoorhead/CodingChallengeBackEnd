@@ -30,18 +30,19 @@ public class Enrollee {
 	private boolean activationStatus;
 	
 	@JsonFormat(pattern="MM-dd-yyyy")
-	//! The birth date of the Enrollee, in 'MM-dd-yyyy' format
+	//! The birth date of the Enrollee, saved in 'MM-dd-yyyy' format
 	private Date birthDate;
 	
 	//! The phone number of the Enrollee, is optional
 	private String phoneNumber;
 	
 	@DBRef
-	//! The dependents of the Enrollee, are optional
+	//! The Set dependents of the Enrollee, are optional
 	private Set<Dependent> dependents;
 	
 	// CONSTRUCTORS
 	
+	//! Default Enrollee constructor, sets activationStatus to false
 	public Enrollee() {
 		super();
 		activationStatus = false;
@@ -50,7 +51,7 @@ public class Enrollee {
 	// NON-STANDARD METHODS
 	
 	/*!
-		\brief Adds a Dependent to the associated Set, allocating the Set if it is null
+		\brief Adds a Dependent to Enrollee.dependents, allocating the Set if it is null
 		\param dependent The Dependent to add
 		\return True if the Dependent was successfully added, false otherwise
 		\sa Dependent
@@ -62,7 +63,7 @@ public class Enrollee {
 	}
 	
 	/*!
-		\brief Removes a Dependent from the associated Set via their id
+		\brief Removes a Dependent from Enrollee.dependents via their Dependent.id
 		\param id The id of the Dependent to remove
 		\return True if the Dependent was successfully removed, false otherwise
 		\sa Dependent
@@ -75,39 +76,100 @@ public class Enrollee {
 	
 	// GETTERS AND SETTERS
 	
+	/*!
+		\brief Getter for Enrollee.id, performs no unexpected operations
+		\return Enrollee.id
+	 */
 	public String getId() {
 		return id;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.id, performs no unexpected operations
+		\param id The id to set Enrollee.id with
+	 */
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	/*!
+		\brief Getter for Enrollee.name, performs no unexpected operations
+		\return Enrollee.name
+	 */
 	public String getName() {
 		return name;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.name, performs no unexpected operations
+		\param name The name to set Enrollee.name with
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	/*!
+		\brief Getter for Enrollee.activationStatus, performs no unexpected operations
+		\return Enrollee.activationStatus
+	 */
 	public boolean isActivationStatus() {
 		return activationStatus;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.activationStatus, performs no unexpected operations
+		\param activationStatus The activation status to set Enrollee.activationStatus with
+	 */
 	public void setActivationStatus(boolean activationStatus) {
 		this.activationStatus = activationStatus;
 	}
+	
+	/*!
+		\brief Getter for Enrollee.birthDate, performs no unexpected operations
+		\return Enrollee.birthDate
+	 */
 	public Date getBirthDate() {
 		return birthDate;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.birthDate, performs no unexpected operations
+		\param birthDate The birth date to set Enrollee.birthDate with
+	 */
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
+
+	/*!
+		\brief Getter for Enrollee.phoneNumber, performs no unexpected operations
+		\return Enrollee.phoneNumber
+	 */
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.phoneNumber, performs no unexpected operations
+		\param phoneNumber The phone number to set Enrollee.phoneNumber with
+	 */
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+	
+	/*!
+		\brief Getter for Enrollee.dependents, performs no unexpected operations
+		\return Enrollee.dependents
+		\sa Dependent
+	 */
 	public Set<Dependent> getDependents() {
 		return dependents;
 	}
+	
+	/*!
+		\brief Setter for Enrollee.dependents, performs no unexpected operations
+		\param dependents The Set of dependents to assign Enrollee.dependents to
+		\sa Dependent
+	 */
 	public void setDependents(Set<Dependent> dependents) {
 		this.dependents = dependents;
 	}
