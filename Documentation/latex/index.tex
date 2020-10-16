@@ -1,0 +1,122 @@
+This project is the submission for the 10/13/2020 back-\/end coding challenge given by Jump Plus. The directive is provide a maintainable back-\/end A\+PI for the Enrollees of a health care program, including all C\+R\+UD operations.\hypertarget{index_autotoc_md1}{}\doxysection{Documentation}\label{index_autotoc_md1}
+The bulk of the documentation for this project has been generated via Doxygen, with formatted comments being interpreted into full help files with class descriptions, method details, and see-\/also links. To access it, click the {\ttfamily Xerus\+\_\+\+Documentation} shortcut in the {\ttfamily Documentation} folder, or {\ttfamily index.\+html} in the {\ttfamily html} folder.\hypertarget{index_autotoc_md2}{}\doxysection{Database Layout}\label{index_autotoc_md2}
+The database is Mongodb, using Mongodb Atlas as the server host. The data is stored in two collections, labelled {\ttfamily enrollee} and {\ttfamily dependent}. Enrollees have a Set of one or more Dependents, so to avoid duplication the Java-\/side Set is tagged with {\ttfamily @D\+B\+Ref}, which treats items as referencing the {\ttfamily dependent} collection. Since Mongodb is a No\+S\+QL framework, unfilled fields won\textquotesingle{}t be saved, but if all data is present, then the layout is as follows\+:\hypertarget{index_autotoc_md3}{}\doxysubsection{Database\+: xerus}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{Collection\+: enrollee}\label{index_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }\\\cline{1-3}
+\endhead
+\+\_\+id  &string  &The database generated id   \\\cline{1-3}
+name  &string  &The full name of the enrollee   \\\cline{1-3}
+birthdate  &date  &The date of birth of the enrollee   \\\cline{1-3}
+activation\+Status  &bool  &The status of an enrollee\textquotesingle{}s application, true for active, false for inactive   \\\cline{1-3}
+phone\+Number  &string  &The phone number of the enrollee   \\\cline{1-3}
+dependents  &array of dependent references  &The dependents of an enrollee   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Collection\+: dependent}\label{index_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ field  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description   }\\\cline{1-3}
+\endhead
+\+\_\+id  &string  &The database generated id   \\\cline{1-3}
+name  &string  &The full name of the enrollee   \\\cline{1-3}
+birthdate  &date  &The date of birth of the enrollee   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{index_autotoc_md6}{}\doxysection{A\+P\+I usage}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{Get an Enrollee}\label{index_autotoc_md7}
+{\ttfamily G\+ET /enrollee/get/\{id\}}
+
+Requests a string parameter, which is the id of an existing Enrollee. Responds with a J\+S\+ON formatted Enrollee, or null if none exists.\hypertarget{index_autotoc_md8}{}\doxysubsection{Create an Enrollee}\label{index_autotoc_md8}
+{\ttfamily P\+UT /enrollee/add}
+
+Requests a J\+S\+ON formatted Enrollee, with the minimum following data\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "name":"SomeName",}
+\DoxyCodeLine{    "birthDate":"10-\/14-\/2020"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+optional input data is as follows, with their defaults\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "activationStatus":false,}
+\DoxyCodeLine{    "phoneNumber":"",}
+\DoxyCodeLine{    "dependents": []}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ Responds with the Enrollee added to the database, containing the generated id.\hypertarget{index_autotoc_md9}{}\doxysubsection{Update an Enrollee}\label{index_autotoc_md9}
+{\ttfamily P\+UT /enrollee/update}
+
+Requests a J\+S\+ON formatted Enrollee, with the minimum following data\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "id":"SomeId123",}
+\DoxyCodeLine{    "name":"SomeName",}
+\DoxyCodeLine{    "birthDate":"10-\/14-\/2020"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+optional input data is as follows, with their defaults\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "activationStatus":false,}
+\DoxyCodeLine{    "phoneNumber":"",}
+\DoxyCodeLine{    "dependents": []}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Responds with the true if the update was successful, false otherwise.\hypertarget{index_autotoc_md10}{}\doxysubsection{Delete an Enrollee}\label{index_autotoc_md10}
+{\ttfamily D\+E\+L\+E\+TE /enrollee/delete/\{id\}}
+
+Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise.\hypertarget{index_autotoc_md11}{}\doxysubsection{Add a Dependent to an Enrollee}\label{index_autotoc_md11}
+{\ttfamily P\+UT /enrollee/add/\{en\+Id\}/dependent/\{dep\+Id\}}
+
+Requests two string parameters, which are the id of an existing Enrollee, and the id of an existing Dependent. Responds with true if the addition was successful, false otherwise.\hypertarget{index_autotoc_md12}{}\doxysubsection{Remove a Dependent from an Enrollee}\label{index_autotoc_md12}
+{\ttfamily D\+E\+L\+E\+TE /enrollee/delete/\{en\+Id\}/dependent/\{dep\+Id\}}
+
+Requests two string parameters, which are the id of an existing Enrollee, and the id of one of their Dependents. Responds with true if the removal was successful, false otherwise.\hypertarget{index_autotoc_md13}{}\doxysubsection{Get a Dependent}\label{index_autotoc_md13}
+{\ttfamily G\+ET /dependent/get/\{id\}}
+
+Requests a string parameter, which is the id of an existing Dependent. Responds with a J\+S\+ON formatted Dependent, or null if none exists.\hypertarget{index_autotoc_md14}{}\doxysubsection{Create a Dependent}\label{index_autotoc_md14}
+{\ttfamily P\+UT /dependent/add}
+
+Requests a J\+S\+ON formatted Dependent, with the following data\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "name":"SomeName",}
+\DoxyCodeLine{    "birthDate":"10-\/14-\/2020"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ Responds with the Dependent added to the database, containing the generated id.\hypertarget{index_autotoc_md15}{}\doxysubsection{Update a Dependent}\label{index_autotoc_md15}
+{\ttfamily P\+UT /dependent/update}
+
+Requests a J\+S\+ON formatted Dependent, with the following data\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    "id":"SomeId123",}
+\DoxyCodeLine{    "name":"SomeName",}
+\DoxyCodeLine{    "birthDate":"10-\/14-\/2020"}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ Responds with true if the Dependent was successfully updated, false otherwise.\hypertarget{index_autotoc_md16}{}\doxysubsection{Delete a Dependent}\label{index_autotoc_md16}
+{\ttfamily D\+E\+L\+E\+TE /dependent/delete/\{id\}}
+
+Requests a string parameter, which is the id of an existing Dependent. Responds with true if the deletion was successful, false otherwise. Be warned that Enrollees with this Dependent will not be updated accordingly-\/ but Enrollee.\+dependents will be stripped of null values when acquired from the database, and updating with this will remove the dependent, effectively removing the issue by hiding it. 
