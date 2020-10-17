@@ -92,7 +92,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a91b0928f999647a8c4a17520d0028a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an Enrollee in the EnrolleeDao given an Enrollee object with a valid id, name, and birth date.  <a href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#a91b0928f999647a8c4a17520d0028a55">More...</a><br /></td></tr>
 <tr class="separator:a91b0928f999647a8c4a17520d0028a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a990d4beeef5dd57acf77072f56d99b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#a7a990d4beeef5dd57acf77072f56d99b">deleteEnrollee</a> (String id)</td></tr>
-<tr class="memdesc:a7a990d4beeef5dd57acf77072f56d99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the Enrollee with the given id from EnrolleeDao.  <a href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#a7a990d4beeef5dd57acf77072f56d99b">More...</a><br /></td></tr>
+<tr class="memdesc:a7a990d4beeef5dd57acf77072f56d99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the Enrollee with the given id from EnrolleeDao, including their Dependents.  <a href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#a7a990d4beeef5dd57acf77072f56d99b">More...</a><br /></td></tr>
 <tr class="separator:a7a990d4beeef5dd57acf77072f56d99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8586ba297310635c03ec81bb86c3385"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee.html">Enrollee</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#ad8586ba297310635c03ec81bb86c3385">getEnrollee</a> (String id)</td></tr>
 <tr class="memdesc:ad8586ba297310635c03ec81bb86c3385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an Enrollee from EnrolleeDao with an id.  <a href="classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service.html#ad8586ba297310635c03ec81bb86c3385">More...</a><br /></td></tr>
@@ -354,7 +354,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deletes the Enrollee with the given id from EnrolleeDao. </p>
+<p>Deletes the Enrollee with the given id from EnrolleeDao, including their Dependents. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The id of the Enrollee to delete </td></tr>

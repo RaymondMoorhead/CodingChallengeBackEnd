@@ -17,7 +17,7 @@ A Service which acts as a middleman between controllers and Enrollee\+Dao.
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service_a91b0928f999647a8c4a17520d0028a55}{update\+Enrollee}} (\mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} enrollee)
 \begin{DoxyCompactList}\small\item\em Updates an Enrollee in the Enrollee\+Dao given an Enrollee object with a valid id, name, and birth date. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service_a7a990d4beeef5dd57acf77072f56d99b}{delete\+Enrollee}} (String id)
-\begin{DoxyCompactList}\small\item\em Deletes the Enrollee with the given id from Enrollee\+Dao. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes the Enrollee with the given id from Enrollee\+Dao, including their Dependents. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service_ad8586ba297310635c03ec81bb86c3385}{get\+Enrollee}} (String id)
 \begin{DoxyCompactList}\small\item\em Gets an Enrollee from Enrollee\+Dao with an id. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1service_1_1_enrollee_service_a60058753ab03375ac3dca41ad8438b23}{add\+Enrollee\+Dependent}} (String en\+Id, String dep\+Id)
@@ -147,7 +147,7 @@ Enrollee, Enrollee\+Dao
 
 
 
-Deletes the Enrollee with the given id from Enrollee\+Dao. 
+Deletes the Enrollee with the given id from Enrollee\+Dao, including their Dependents. 
 
 
 \begin{DoxyParams}{Parameters}

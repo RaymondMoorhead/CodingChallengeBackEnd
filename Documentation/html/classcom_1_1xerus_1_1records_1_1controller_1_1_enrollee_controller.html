@@ -89,7 +89,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a54122a7a839554a450eb8333f0e2e831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates an existing Enrollee with the given values in the database via EnrolleeService.  <a href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a54122a7a839554a450eb8333f0e2e831">More...</a><br /></td></tr>
 <tr class="separator:a54122a7a839554a450eb8333f0e2e831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ddc5d0fef3b4cf0c33a448a8ed0c8b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a82ddc5d0fef3b4cf0c33a448a8ed0c8b">deleteEnrollee</a> (@PathVariable(value=&quot;id&quot;) String id)</td></tr>
-<tr class="memdesc:a82ddc5d0fef3b4cf0c33a448a8ed0c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the Enrollee with the given id via EnrolleeService.  <a href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a82ddc5d0fef3b4cf0c33a448a8ed0c8b">More...</a><br /></td></tr>
+<tr class="memdesc:a82ddc5d0fef3b4cf0c33a448a8ed0c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the Enrollee with the given id via EnrolleeService, including their Dependents.  <a href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a82ddc5d0fef3b4cf0c33a448a8ed0c8b">More...</a><br /></td></tr>
 <tr class="separator:a82ddc5d0fef3b4cf0c33a448a8ed0c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55309e44d1fb82ab5d7b6c4b6d349639"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a55309e44d1fb82ab5d7b6c4b6d349639">addEnrolleeDependent</a> (@PathVariable(value=&quot;enId&quot;) String enId, @PathVariable(value=&quot;depId&quot;) String depId)</td></tr>
 <tr class="memdesc:a55309e44d1fb82ab5d7b6c4b6d349639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a Dependent to an Enrollee in the database via EnrolleeService.  <a href="classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller.html#a55309e44d1fb82ab5d7b6c4b6d349639">More...</a><br /></td></tr>
@@ -215,7 +215,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Deletes the Enrollee with the given id via EnrolleeService. </p>
+<p>Deletes the Enrollee with the given id via EnrolleeService, including their Dependents. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The id of the Enrollee to delete </td></tr>

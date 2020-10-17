@@ -86,7 +86,7 @@ optional input data is as follows, with their defaults\+:
 Responds with the true if the update was successful, false otherwise.\hypertarget{index_autotoc_md10}{}\doxysubsection{Delete an Enrollee}\label{index_autotoc_md10}
 {\ttfamily D\+E\+L\+E\+TE /enrollee/delete/\{id\}}
 
-Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise.\hypertarget{index_autotoc_md11}{}\doxysubsection{Add a Dependent to an Enrollee}\label{index_autotoc_md11}
+Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise. The Enrollee\textquotesingle{}s Dependents will also be deleted.\hypertarget{index_autotoc_md11}{}\doxysubsection{Add a Dependent to an Enrollee}\label{index_autotoc_md11}
 {\ttfamily P\+UT /enrollee/add/\{en\+Id\}/dependent/\{dep\+Id\}}
 
 Requests two string parameters, which are the id of an existing Enrollee, and the id of an existing Dependent. Responds with true if the addition was successful, false otherwise.\hypertarget{index_autotoc_md12}{}\doxysubsection{Remove a Dependent from an Enrollee}\label{index_autotoc_md12}

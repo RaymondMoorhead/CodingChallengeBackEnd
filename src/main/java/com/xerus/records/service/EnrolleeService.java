@@ -100,7 +100,7 @@ public class EnrolleeService {
 	}
 	
 	/*!
-		\brief Deletes the Enrollee with the given id from EnrolleeDao
+		\brief Deletes the Enrollee with the given id from EnrolleeDao, including their Dependents
 		\param id The id of the Enrollee to delete
 		\return True if an Enrollee of the given id existed, false otherwise
 		\sa Enrollee, EnrolleeDao

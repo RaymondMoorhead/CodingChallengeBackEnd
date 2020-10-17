@@ -141,7 +141,7 @@ Update an Enrollee</h2>
 <h2><a class="anchor" id="autotoc_md10"></a>
 Delete an Enrollee</h2>
 <p><code>DELETE /enrollee/delete/{id}</code></p>
-<p>Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise.</p>
+<p>Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise. The Enrollee's Dependents will also be deleted.</p>
 <h2><a class="anchor" id="autotoc_md11"></a>
 Add a Dependent to an Enrollee</h2>
 <p><code>PUT /enrollee/add/{enId}/dependent/{depId}</code></p>

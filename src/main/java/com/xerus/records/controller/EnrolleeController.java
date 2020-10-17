@@ -61,7 +61,7 @@ public class EnrolleeController {
 	
 	@DeleteMapping(value = "/enrollee/delete/{id}")
 	/*!
-		\brief Deletes the Enrollee with the given id via EnrolleeService
+		\brief Deletes the Enrollee with the given id via EnrolleeService, including their Dependents
 		\param id The id of the Enrollee to delete
 		\return True if an Enrollee of the given id existed, false otherwise
 		\sa Enrollee, EnrolleeService

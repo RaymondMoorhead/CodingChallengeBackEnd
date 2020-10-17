@@ -87,7 +87,7 @@ Responds with the true if the update was successful, false otherwise.
 
 `DELETE /enrollee/delete/{id}`
 
-Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise.
+Requests a string parameter, which is the id of an existing Enrollee. Responds with true if the deletion was successful, false otherwise. The Enrollee's Dependents will also be deleted.
 
 ### Add a Dependent to an Enrollee
 

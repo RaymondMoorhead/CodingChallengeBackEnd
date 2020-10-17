@@ -15,7 +15,7 @@ A\+Pi which enables external use of C\+R\+UD operations on Enrollee objects in t
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a54122a7a839554a450eb8333f0e2e831}{update\+Enrollee}} (@Request\+Body \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1entity_1_1_enrollee}{Enrollee}} enrollee)
 \begin{DoxyCompactList}\small\item\em Updates an existing Enrollee with the given values in the database via Enrollee\+Service. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a82ddc5d0fef3b4cf0c33a448a8ed0c8b}{delete\+Enrollee}} (@Path\+Variable(value=\char`\"{}id\char`\"{}) String id)
-\begin{DoxyCompactList}\small\item\em Deletes the Enrollee with the given id via Enrollee\+Service. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes the Enrollee with the given id via Enrollee\+Service, including their Dependents. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a55309e44d1fb82ab5d7b6c4b6d349639}{add\+Enrollee\+Dependent}} (@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String en\+Id, @Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String dep\+Id)
 \begin{DoxyCompactList}\small\item\em Adds a Dependent to an Enrollee in the database via Enrollee\+Service. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classcom_1_1xerus_1_1records_1_1controller_1_1_enrollee_controller_a2b9cf59817be2f8ae4e0edd71d4b591e}{delete\+Enrollee\+Dependent}} (@Path\+Variable(value=\char`\"{}en\+Id\char`\"{}) String en\+Id, @Path\+Variable(value=\char`\"{}dep\+Id\char`\"{}) String dep\+Id)
@@ -84,7 +84,7 @@ Enrollee, Enrollee\+Service
 
 
 
-Deletes the Enrollee with the given id via Enrollee\+Service. 
+Deletes the Enrollee with the given id via Enrollee\+Service, including their Dependents. 
 
 
 \begin{DoxyParams}{Parameters}
