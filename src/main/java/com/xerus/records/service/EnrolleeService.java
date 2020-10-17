@@ -106,7 +106,10 @@ public class EnrolleeService {
 		\sa Enrollee, EnrolleeDao
 	 */
 	public boolean deleteEnrollee(String id) {
-		if(enDao.existsById(id)) {
+		Enrollee enrollee = getEnrollee(id);
+		if(enrollee != null) {
+			for(Dependent dep : enrollee.getDependents())
+				depService.deleteDependent(dep.getId());
 			enDao.deleteById(id);
 			return true;
 		}
